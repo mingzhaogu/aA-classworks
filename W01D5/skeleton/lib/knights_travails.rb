@@ -2,23 +2,18 @@ require_relative '00_tree_node.rb'
 require 'byebug'
 
 class KnightPathFinder
-  MOVE_DIMENSIONS = [[-2, -1],
-                    [-2, 1],
-                    [-1, -2],
-                    [-1, 2],
-                    [1, 2],
-                    [2, -1],
-                    [1, -2],
-                    [2, 1]]
+  MOVE_DIMENSIONS = [[-2, -1], [-2, 1],
+          [-1, -2], [-1, 2], [1, 2],
+          [2, -1], [1, -2], [2, 1]]
 
-  attr_reader :position, :moves, :visited_positions, :root
+  attr_reader :starting_position, :moves, :visited_positions, :root
 
-  def initialize(position= [0,0])
-    @position = position
-    @visited_positions = [position]
-    @root = PolyTreeNode.new(position)
+  def initialize(starting_position = [0,0])
+    @starting_position = starting_position
+    @visited_positions = [starting_position]
+    @root = PolyTreeNode.new(starting_position)
     @move_tree = build_move_tree
-    @start_pos = @root.value
+    @root_pos = @root.value
   end
 
   def self.valid_moves(pos)
@@ -27,8 +22,7 @@ class KnightPathFinder
     MOVE_DIMENSIONS.each do |move_constant|
       x, y = pos[0], pos[1]
       x2, y2 = move_constant[0], move_constant[1]
-      new_x = x + x2
-      new_y = y + y2
+      new_x, new_y = (x + x2), (y + y2)
 
       if new_x.between?(0, 7) && new_y.between?(0, 7)
         moves << [new_x, new_y]
@@ -40,13 +34,11 @@ class KnightPathFinder
 
   def new_move_positions(pos)
     moves = self.class.valid_moves(pos)
-    possible_moves = []
 
-    moves.each do |move|
-      unless visited_positions.include?(move)
-        possible_moves << move
-      end
+    possible_moves = moves.reject do |move|
+      visited_positions.include?(move)
     end
+
     @visited_positions.concat(possible_moves)
     possible_moves
   end
@@ -74,7 +66,7 @@ class KnightPathFinder
   def trace_path_back
     pathway = [@end_node]
 
-    until pathway.first.value == @start_pos
+    until pathway.first.value == @root_pos
       pathway.unshift(pathway.first.parent)
     end
 
