@@ -1,18 +1,18 @@
 require_relative 'piece'
 require_relative 'slideable'
 
-class Rook < Piece
+class Bishop < Piece
 
   include Slideable
 
   def symbol
-    @symbol = "R"
+    @symbol = "B"
   end
 
   protected
 
   def move_dirs
-    Slideable::HORIZONTAL_DIRS
+    Slideable::DIAGONAL_DIRS
   end
 
 end

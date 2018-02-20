@@ -3,23 +3,33 @@ require_relative 'cursor'
 
 
 class Display
-  attr_accessor :grid, :cursor
+  attr_accessor :board, :cursor
 
   def initialize(board)
-    @grid = board
-    @cursor = Cursor.new([0, 0], @grid)
+    @board = board
+    @cursor = Cursor.new([0, 0], @board)
   end
 
   def render
-    grid.board.each { |row| p row }
-    grid[cursor.cursor_pos].symbol.green
+    system('clear')
+    board.board.each_with_index do |row, row_idx|
+      row.each_with_index do |_col, col_idx|
+        pos = [row_idx, col_idx]
+
+        if pos == cursor.cursor_pos
+          print board[pos].symbol.colorize(background: :cyan)
+        else
+          print board[pos].symbol
+        end
+      end
+      puts
+    end
   end
 
   def loop_render
     loop do
-      cursor.get_input
       render
-
+      cursor.get_input
     end
   end
 
