@@ -6,7 +6,8 @@ class Knight < Piece
   include Stepable
 
   def symbol
-    @symbol = "N"
+    @symbol = " ♞ "
+    # color == :black ? @symbol = " ♞ " : @symbol = " ♘ "
   end
 
   protected

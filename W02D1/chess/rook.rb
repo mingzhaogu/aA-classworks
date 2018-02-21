@@ -6,7 +6,8 @@ class Rook < Piece
   include Slideable
 
   def symbol
-    @symbol = "R"
+    @symbol = " ♜ "
+    # color == :black ? @symbol = " ♜ " : @symbol = " ♖ "
   end
 
   protected

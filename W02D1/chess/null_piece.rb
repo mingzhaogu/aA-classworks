@@ -14,7 +14,7 @@ class NullPiece < Piece
   end
 
   def symbol
-    @symbol = "_"
+    @symbol = "   "
   end
 
 end

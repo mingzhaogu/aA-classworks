@@ -6,7 +6,8 @@ class King < Piece
   include Stepable
 
   def symbol
-    @symbol = "K"
+    @symbol = " ♚ "
+    # color == :black ? @symbol = " ♚ " : @symbol = " ♔ "
   end
 
   protected

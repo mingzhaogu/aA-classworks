@@ -3,6 +3,13 @@ require_relative 'piece'
 class Pawn < Piece
 
   def symbol
-    @symbol = "P"
+    @symbol = " ♟ "
+    # color == :black ? @symbol = " ♟ " : @symbol = " ♙ "
   end
+
+
+
+
+
+
 end

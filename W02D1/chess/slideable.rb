@@ -10,6 +10,7 @@ module Slideable
     move_dirs.each do |delta|
       possible_moves << grow_unblocked_moves_in_dir(delta[0], delta[1])
     end
+    
     possible_moves
   end
 

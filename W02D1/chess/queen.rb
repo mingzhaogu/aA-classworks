@@ -6,7 +6,8 @@ class Queen < Piece
   include Slideable
 
   def symbol
-    @symbol = "Q"
+    @symbol = " ♛ "
+    # color == :black ? @symbol = " ♛ " : @symbol = " ♕ "
   end
 
   protected
