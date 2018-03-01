@@ -1,0 +1,89 @@
+#!/usr/bin/env ruby
+require 'byebug'
+
+class CLI
+
+  attr_accessor :user
+
+  def initialize
+    @user = nil
+  end
+
+  def go
+    login
+
+    loop do
+      system('clear')
+      choice = prompt
+
+      puts "\n"
+
+      if choice.include?("red")
+        visit_url
+      elsif choice.include?("blue")
+        shorten_url
+      else
+        puts "The only way you're getting through this door is over my big dead ass."
+        break
+      end
+    end
+  end
+
+  def login
+    self.user = get_user
+  end
+
+  def get_user
+    begin
+      puts "Enter your email:"
+      email = gets.chomp
+      # byebug
+      user = User.find_by(email: email)
+
+      raise "Invalid email!" unless user
+      return user
+    rescue
+      puts "Invalid email address!"
+      retry
+    end
+  end
+
+  def prompt
+    puts "Red pill: visit an already shortened url."
+    puts "Blue pill: enter a URL you would like to shorten. \n \n"
+    puts "This is your last chance. After this, there is no turning back."
+    puts "Red pill or blue pill? \n \n"
+
+    input = gets.chomp.downcase
+  end
+
+  def shorten_url
+    puts "Please enter a url to shorten."
+    url = gets.chomp
+
+    shortened_url = ShortenedUrl.shorten(self.user, url)
+
+    puts "The shortened url is: #{shortened_url.short_url}"
+    puts "Press <enter> to continue:"
+    gets
+  end
+
+  def visit_url
+    begin
+      puts "Please enter a shortened url to visit."
+      short_url = gets.chomp
+      url_object = ShortenedUrl.find_by(short_url: short_url)
+      long_url = url_object.long_url
+    rescue
+      puts "Invalid shortened url!"
+      retry
+    end
+
+    Visit.record_visit!(self.user, url_object)
+    Launchy.open( long_url )
+  end
+end
+
+if $PROGRAM_NAME == __FILE__
+  CLI.new.go
+end
