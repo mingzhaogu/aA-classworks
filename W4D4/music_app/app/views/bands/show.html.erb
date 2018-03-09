@@ -1,0 +1,12 @@
+<h2>Welcome to <%= @band.name %>'s page</h2>
+
+<% @band.albums.each do |album| %>
+  <p>
+    <a href='<%= album_url(album) %>'><%= album.title %></a>
+  </p>
+<% end %>
+
+<p>
+  <a href='<%= bands_url %>'>View All Bands</a>
+  <a href='<%= user_url %>'>Back to My Page</a>
+</p>

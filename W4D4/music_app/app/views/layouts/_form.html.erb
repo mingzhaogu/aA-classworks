@@ -1,0 +1,27 @@
+<h2><%= header_text %></h2>
+
+<form class="" action='<%= submit_url %>' method="POST">
+
+  <br>
+
+  <%= auth_token %>
+
+  <label for="">Email:
+    <input type="text" name="user[email]" value="">
+  </label>
+
+  <br>
+
+  <label for="">Password:
+    <input type="password" name="user[password]" value="">
+  </label>
+
+  <br>
+
+  <input type="submit" value='<%= header_text %>'>
+
+</form>
+
+<br>
+
+<a href='<%= alt_button_url %>'><%= alt_text %></a>

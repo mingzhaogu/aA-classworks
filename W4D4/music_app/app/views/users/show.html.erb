@@ -1,2 +1,7 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h2>Check out these awesome bands!</h2>
+  <ul>
+  <% Band.all.each do |band| %>
+    <li>
+      <a href='<%= band_url(band) %>'><%= band.name %></a>
+    </li>
+  <% end %>

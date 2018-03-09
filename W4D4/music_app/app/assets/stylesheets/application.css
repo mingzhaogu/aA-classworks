@@ -13,3 +13,90 @@
  *= require_tree .
  *= require_self
  */
+
+header.application_header {
+  background-color: #81ecec;
+  opacity: 0.5;
+  display: flex;
+}
+
+header.application_header h1 {
+  width: 50%;
+  height: 50px;
+  display: inline-block;
+  font-family: 'Poiret One', cursive;
+  /* float: left; */
+}
+
+header.application_header section {
+  width: 50%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  /* float: right; */
+  text-align: right;
+}
+
+header.application_header section p {
+  height: 50%;
+}
+
+/* body {
+  text-align: center;
+} */
+
+form {
+  border-color: coral;
+}
+
+form label {
+  padding: px;
+}
+
+form input[type=submit] {
+  font-style: inherit;
+  background-color: #81ecec;
+  /* display: inline-block; */
+  /* padding: 10px; */
+  /* margin: 10px; */
+  /* border-radius: 50% 20% / 10% 40%; */
+}
+
+a {
+
+  text-decoration: none;
+  vertical-align: middle;
+  font-family: "Poiret One";
+  background-color: #81ecec;
+  display: inline-block;
+  padding: 5px;
+  margin: 2px;
+  /* border-radius: 50% 20% / 10% 40%; */
+}
+
+a:hover {
+    background-color: #fd79a8;
+}
+
+/* section.welcome {
+  text-align: left;
+  padding-left: 0px;
+  font-family: 'Henny Penny', cursive;
+  font-size: larger;
+  display: inline-block;
+} */
+
+p {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+/* section.welcome {
+  text-align: left;
+  font-family: 'Henny Penny', cursive;
+  font-size: larger;
+  display: inline-block;
+} */
+
+ul li {
+  list-style-type: none;
+}

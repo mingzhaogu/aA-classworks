@@ -1,0 +1,19 @@
+// Place all the styles related to the Bands controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  font-style: bold;
+
+  background-image: url('/assets/bands_background_image.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+a {
+  font-style: inherit;
+  background-color: powderblue;
+  display: inline-block;
+  padding: 0px;
+}

@@ -1,3 +1,28 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  text-align: left;
+}
+
+h2 {
+  font-family: 'Ribeye Marrow', cursive;
+}
+
+body {
+  text-align: center;
+}
+
+body {
+  font-style: bold;
+
+  background-image: url('/assets/login_page.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  font-family: 'Sacramento', cursive;
+}

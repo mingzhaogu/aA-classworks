@@ -4,9 +4,26 @@
     <title>MusicApp</title>
     <%= csrf_meta_tags %>
 
+    <link href="https://fonts.googleapis.com/css?family=Erica+One|Henny+Penny|Luckiest+Guy|Poiret+One|Ribeye+Marrow|Sacramento" rel="stylesheet">
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
+
+  <header class="application_header">
+    <h1>&#9834; Music App &#9835;</h1>
+
+    <% if logged_in?(@user) %>
+    <section class="welcome">
+      <p>Welcome, <%= current_user.email %>!</p>
+        <form action='<%= session_url %>' method="POST">
+          <%= auth_token %>
+          <input type="hidden" name="_method" value="DELETE" />
+          <input type="submit" value="logout">
+        </form>
+    </section>
+    <% end %>
+  </header>
 
   <body>
     <%= yield %>
