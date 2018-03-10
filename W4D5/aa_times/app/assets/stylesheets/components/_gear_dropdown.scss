@@ -1,0 +1,40 @@
+// Use the gear_dropdown.png screenshot as a style guide>
+
+#gear-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 85px;
+  border: 1px solid $light-gray;
+  background-color: white;
+  width: 250px;
+  z-index: 1;
+  font-style: $sans-serif;
+  // padding: 10px;
+}
+
+
+.dropdown-subtitle {
+  font-style: $sans-serif;
+  
+}
+
+.editions {
+  border-bottom: 1px solid $light-gray;
+  padding: 10px;
+}
+
+.editions a:hover {
+  background-color: $light-gray;
+}
+
+.help {
+  padding: 10px;
+}
+
+.help a {
+  color: $blue;
+}
+
+.help a:hover {
+  text-decoration: underline;
+}
