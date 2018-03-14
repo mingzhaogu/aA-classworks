@@ -1,0 +1,8 @@
+<h1><%= @post.title %></h1>
+<p>Find me in app/views/posts/show.html.erb</p>
+
+<% @post.subs.each do |sub| %>
+  <a href='<%= sub_url(sub) %>'><%= sub.title %>
+  </a>
+
+<% end %>

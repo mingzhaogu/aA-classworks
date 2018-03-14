@@ -1,0 +1,21 @@
+<h1>Show Off Dat Sub</h1>
+
+<% @sub.posts.each do |post| %>
+  <p>
+    <label>Title:
+      <a href="<%= post_url(post) %>">
+        <%= post.title %>
+      </a>
+    </label><br>
+
+    <label>URL:
+      <%= post.url %>
+    </label><br>
+
+    <label>Content:
+      <%= post.content %>
+    </label>
+  </p>
+<% end %><br>
+
+<a href="<%= new_post_url %>">Create New Post</a>

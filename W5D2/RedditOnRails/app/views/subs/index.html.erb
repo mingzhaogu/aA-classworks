@@ -1,0 +1,12 @@
+<h1>All dem subs</h1>
+
+<img src="/assets/subpic.jpg" alt="">
+<% @subs.each do |sub| %>
+  <li>
+    <a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+  </li>
+<% end %>
+
+<p>
+  <a href="<%= new_sub_url %>">Create New SAMMY</a>
+</p>
