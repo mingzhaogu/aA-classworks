@@ -1,0 +1,32 @@
+ul {
+  padding: 5px;
+  background-color: black;
+  height: 300px;
+  width: 300px;
+}
+
+li {
+  background-color: gray;
+  list-style: none;
+  height: 30%;
+  width: 30%;
+  float: left;
+  margin: 5px;
+  justify-content: center;
+}
+
+li p {
+  position: relative;
+  font-size: 84px;
+  line-height: 20px;
+  text-align: center;
+  top: -40px;
+}
+
+.hovered {
+  background-color: yellow;
+}
+
+.clicked {
+  background-color: #8b4c00;
+}
