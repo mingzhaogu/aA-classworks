@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* $color1: hsla(197%, 93%, 29%, 1);
+ $color2: hsla(101%, 73%, 66%, 1);
+ $color3: hsla(174%, 65%, 70%, 1);
+ $color4: hsla(200%, 43%, 78%, 1);
+ $color5: hsla(183%, 64%, 41%, 1);
+
+ /* RGB */
+ /* $color1: rgba(5, 102, 141, 1);
+ $color2: rgba(146, 232, 106, 1);
+ $color3: rgba(129, 228, 218, 1);
+ $color4: rgba(174, 207, 223, 1);
+ $color5: rgba(38, 165, 172, 1); */
+
+body {
+  background-color: #81E4DA;
+  width: 900px;
+  border: 1px solid #81E4DA;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 60px;
+  text-align: center;
+}
+
+.top-nav {
+  display: flex;
+}
+
+.top-nav li {
+  border: none;
+  background-color: inherit;
+}
+
+.top-nav-section {
+  border: inherit;
+}
+
+h1 {
+  text-transform: capitalize;
+  background-color: #26A5AC;
+  color: #AECFDF;
+  padding: 0 5px;
+}
+
+li {
+  list-style: none;
+  padding: 10px;
+  color: #05668D;
+  background-color: #85D361;
+  border: 1px solid #05668D;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+form input {
+  border: 1px solid #05668D;
+}
+
+form input:focus {
+  /* border: 1px solid #92E86A; */
+}
+
+input[type="submit"] {
+  padding: 5px;
+  background-color: #26A5AC;
+  color: #AECFDF;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 10px;
+}
