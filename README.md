@@ -1,6 +1,12 @@
 # App Academy Classworks
 
-[W1](#week-1) : [W2](#week-2) : [W3](#week-3) : [W3](#week-3) : [W4](#week-4) : [W5](#week-5) : [W6](#week-6)
+: [W1](#week-1) :
+: [W2](#week-2) :
+: [W3](#week-3) :
+: [W3](#week-3) :
+: [W4](#week-4) :
+: [W5](#week-5) :
+: [W6](#week-6) :
 
 ## Week 1
 
@@ -22,7 +28,7 @@
 - Screwedoku [Debugging]
 
 **Day 5:**
-- Shakshukah: HTML <head> Exercise
+- Shakshukah: HTML `<head>` Exercise
 - PolyTreeNode [Data Structures]
 - Knight's Travails
 
