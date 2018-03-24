@@ -18,13 +18,13 @@
 
 [week-1-day-1]: W1D1
 
-**Day 2:**
+**[Day 2][week-1-day-2]:**
 - Intro to HTML
 - Match To Memory [Game]
 
 [week-1-day-2]: W1D2
 
-**Day 3:**
+**[Day 3:][week-1-day-3]**
 - Shakshukah: HTML Containers Exercise
 - Recursion
 - Word Chains
@@ -35,7 +35,7 @@
 - Shakshukah: HTML Forms Exercise
 - Screwedoku [Debugging]
 
-**Day 5:**
+**[Day 5:][week-1-day-5]**
 - Shakshukah: HTML `<head>` Exercise
 - PolyTreeNode [Data Structures]
 - Knight's Travails
