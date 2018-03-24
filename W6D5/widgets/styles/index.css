@@ -31,7 +31,7 @@ body {
   justify-content: space-between;
 }
 
-.tabs h1 {
+.tabs .tab {
   border-style: solid;
   border-color: #5E5E5E;
   border-width: 4px 2px;
@@ -41,11 +41,15 @@ body {
   background: #ACFCD9;
 }
 
-.tabs h1:hover {
+.tabs .clicked, .tabs h1:hover {
   background-color: #5E5E5E;
   color: #F8FFF4;
   cursor: pointer;
 }
+
+/* .tabs .clicked {
+  border-bottom: none;
+} */
 
 .tabs h1:first-child {
   border-left: 4px solid #5E5E5E;
@@ -60,7 +64,15 @@ body {
   border-top: none;
   height: 300px;
   background: #ACFCD9;
-  padding: 5px;
   vertical-align: middle;
   transition-delay: 12s;
+  display: flex;
+}
+
+.sub-article {
+  margin: 10px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  border: 1px dashed #5E5E5E;
 }

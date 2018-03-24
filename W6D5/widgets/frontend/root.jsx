@@ -4,9 +4,9 @@ import Weather from './weather';
 import Tab from './tab';
 
 const tabs = [
-  {id: 0, key: 1, title: 'tab1', content: 'content of tab 1'},
-  {id: 1, key: 2, title: 'tab2', content: 'content of tab 2'},
-  {id: 2, key: 3, title: 'tab3', content: 'content of tab 3'}
+  {id: 0, key: 1, title: 'tab1', content: 'abcdefg'},
+  {id: 1, key: 2, title: 'tab2', content: '01234567890'},
+  {id: 2, key: 3, title: 'tab3', content: 'asdfjkl;'}
 ];
 
 class Root extends React.Component {

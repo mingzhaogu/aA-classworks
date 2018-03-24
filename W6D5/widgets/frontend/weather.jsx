@@ -4,7 +4,7 @@ class Weather extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentLocation: [],
+      currentLocation: ['abc'],
       temperature: 0,
       city: "",
     };
@@ -23,24 +23,25 @@ class Weather extends React.Component {
   handlePosition(position) {
     let xhr = new XMLHttpRequest();
 
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          this.setState({
-            temperature: xhr.responseText.main.temp,
-            city: xhr.responseText.name,
-          });
-        }
-      }
-    };
+    // xhr.onreadystatechange = function() {
+    //   if (xhr.readyState === XMLHttpRequest.DONE) {
+    //     if (xhr.status === 200) {
+    //       this.setState({
+    //         temperature: xhr.responseText.main.temp,
+    //         city: xhr.responseText.name,
+    //       });
+    //       console.log(this.state.temperature)
+    //       console.log(this.state.city)
+    //     }
+    //   }
+    // };
 
-
-    console.log(position.coords.latitude, position.coords.longitude);
+    this.setState({currentLocation: [position.coords.latitude, position.coords.longitude]});
   }
 
   render() {
     return (
-      ""
+      <div>{this.state.currentLocation}</div>
     );
   }
 }

@@ -18,14 +18,25 @@ class Tab extends React.Component {
       <div className='tabs'>
         <ul>
           {tabs.map((tab, idx) => {
-            return <h1
-              key={tab.key}
-              id={tab.id}
-              onClick={this.clickHandler(tab.id)}>{tab.title}</h1>;
+            if (idx === this.state.selection) {
+              return <h1
+                key={tab.key}
+                id={tab.id}
+                className='tab clicked'
+                onClick={this.clickHandler(tab.id)}>{tab.title}</h1>
+            } else {
+              return <h1
+                key={tab.key}
+                id={tab.id}
+                className='tab'
+                onClick={this.clickHandler(tab.id)}>{tab.title}</h1>;
+            }
           })}
         </ul>
         <article>
-          {tabs[this.state.selection].content}
+          <div className='sub-article'>
+            {tabs[this.state.selection].content}
+          </div>
         </article>
       </div>
     );
@@ -33,17 +44,3 @@ class Tab extends React.Component {
 }
 
 export default Tab;
-
-
-// <div>
-//   <ul className='tab'>
-//     {this.array.map((tab) => {
-//       return (
-//         <h1
-//           onClick={this.clickHandler}
-//           className='tab-title'
-//           id={tab.title}>{tab.title}
-//         </h1>
-//       );
-//     })}
-//   </ul>
