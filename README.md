@@ -14,7 +14,7 @@
 
 **[Day 1:][week-1-day-1]**
 - Enumerables
-- Ghost [Game]
+- Ghost [Game] :ghost:
 
 [week-1-day-1]: W1D1
 
@@ -33,12 +33,12 @@
 
 **Day 4:**
 - Shakshukah: HTML Forms Exercise
-- Screwedoku [Debugging]
+- Screwedoku [:bug:]
 
 **[Day 5:][week-1-day-5]**
 - Shakshukah: HTML `<head>` Exercise
 - PolyTreeNode [Data Structures]
-- Knight's Travails
+- Knight's Travails :horse:
 
 [week-1-day-5]: W1D5
 
