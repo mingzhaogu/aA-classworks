@@ -12,9 +12,11 @@
 
 ## Week 1
 
-**[Day 1:][W1D1]**
+**[Day 1:][week-1-day-1]**
 - Enumerables
 - Ghost [Game]
+
+[week-1-day-1]: W1D1
 
 **Day 2:**
 - Intro to HTML
