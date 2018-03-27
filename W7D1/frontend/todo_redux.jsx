@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   const store = configureStore();
   window.store = store;
-  window.todo_list = TodoList(store.getState());
   ReactDOM.render(<Root store={ store }/>, root);
 });
+
+// window.store = store;
+// window.todo_list = TodoList(store.getState());

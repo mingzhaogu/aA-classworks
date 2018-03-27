@@ -1,18 +1,25 @@
 import React from 'react';
 import TodoListItem from './todo_list_item';
+import TodoForm from './todo_form2';
 
-export default ({ todos }) => {
-  const todoItems = Array.from(todos).map( todo => (
-    <TodoListItem todo={todo} />
+export default ({ todos, receiveTodo }) => {
+  const todoItems = todos.map( todo => (
+    <TodoListItem key={todo.id}
+      todo={todo}
+      receiveTodo={ receiveTodo } />
   ));
 
+
+
   return (
-    <div className='todo_list'>
-      <h1>asodfjasdfa;sdf
+    <div className="todo_list">
+      <h1>
+        '2do or not 2do'
       </h1>
-      <ul className='todo_list_items'>
+      <ul className="todo_list_items">
         {todoItems}
       </ul>
+      <TodoForm receiveTodo={ receiveTodo }/>
     </div>
   );
 };
