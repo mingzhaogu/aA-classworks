@@ -19468,8 +19468,9 @@ var pokemonReducer = function pokemonReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments[1];
 
-  var newState = void 0;
+  Object.freeze(state);
 
+  var newState = void 0;
   switch (action.type) {
     case _pokemon_actions.RECEIVE_ALL_POKEMON:
       newState = action.pokemon;
@@ -19528,8 +19529,9 @@ exports.selectAllPokemon = undefined;
 
 var _lodash = __webpack_require__(57);
 
-var selectAllPokemon = exports.selectAllPokemon = function selectAllPokemon(state) {
-  return Object.values(state.entities.pokemon);
+var selectAllPokemon = exports.selectAllPokemon = function selectAllPokemon(_ref) {
+  var entities = _ref.entities;
+  return (0, _lodash.values)(entities.pokemon);
 };
 
 /***/ }),
