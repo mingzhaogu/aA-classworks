@@ -38634,7 +38634,14 @@ var PokemonIndex = function (_React$Component) {
               "li",
               { key: poke.id },
               _react2.default.createElement("img", { src: poke.image_url }),
-              poke.name
+              _react2.default.createElement("br", null),
+              _react2.default.createElement(
+                "p",
+                { className: "pokemon-name" },
+                poke.id,
+                ". ",
+                poke.name
+              )
             );
           })
         )
