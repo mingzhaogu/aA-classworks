@@ -1379,11 +1379,11 @@ ActiveRecord::Base.transaction do
 
   pokemon = pokemon.map do |num, stats|
     stats['image_url'] = "#{num}.svg"
-    stats
+    stats['id'] = num
   end
 
   Pokemon.create!(pokemon)
-  
+
   Pokemon.all.each do |pokemon|
     3.times { create_random_item!(pokemon) }
   end
