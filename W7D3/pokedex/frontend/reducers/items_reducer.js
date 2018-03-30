@@ -7,7 +7,7 @@ const itemsReducer = (state = {}, action) => {
   let newState;
   switch (action.type) {
   case RECEIVE_SINGLE_POKEMON:
-    newState = action.item;
+    newState = action.payload.items;
     return newState;
   default:
     return state;

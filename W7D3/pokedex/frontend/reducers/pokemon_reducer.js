@@ -8,10 +8,10 @@ const pokemonReducer = (state = {}, action) => {
   let newState;
   switch (action.type) {
   case RECEIVE_ALL_POKEMON:
-    newState = action.pokemon;
+    newState = merge({}, state, action.pokemon);
     return newState;
   case RECEIVE_SINGLE_POKEMON:
-    newState = merge({}, state, { [action.pokemon.id]: action.pokemon });
+    newState = merge({}, state, { [action.payload.pokemon.id]: action.payload.pokemon });
     return newState;
   default:
     return state;
